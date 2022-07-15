@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谁的小羊丢了</title>git
+</head>
+<style>
+    .wrap {
+        text-align: center;
+    }
+    .box {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .box div {
+        width: 100px;
+        height: 100px;
+        margin: 10px 10px 0 0;
+        background-color: #000;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <button onclick="changeRed()">点击将div变成红色</button>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+<script>
+    var div = document.querySelectorAll('.box div')
+    function changeRed () {
+        for(var i=0;i<div.length;i++) {
+            div[i].style.backgroundColor='#f00'
+        }
+    }
+</script>
+</html>

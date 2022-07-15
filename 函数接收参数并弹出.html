@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谁的小羊跑了</title>
+</head>
+<style>
+    .box {
+        margin: 10px auto;
+        line-height: 30px;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <div class="box">
+        <input type="text" name="address" value="北京市"><br>
+        <input type="text" name="address" value="朝阳区"><br>
+        <input type="button" value="传参" onclick="submit()">
+    </div>
+
+</body>
+<script>
+    var address = document.getElementsByName('address')
+    function submit () {
+        for (let i = 0; i < address.length; i++) {
+            alert(address[i].value);
+        }
+    }
+</script>
+</html>

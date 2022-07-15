@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>谁的小羊跑了</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      margin: 50px 0 10px 100px;
+    }
+    span {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .red {
+      width: 20px;
+      height: 20px;
+      background: #f00;
+    }
+    .addRed {
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 7px solid #f00;
+    }
+    .green {
+      width: 20px;
+      height: 20px;
+      background: #008000;
+    }
+    .addGreen {
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 7px solid #008000;
+    }
+    .blak {
+      width: 20px;
+      height: 20px;
+      background: #000000;
+    }
+    .addBlak {
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 7px solid #000;
+    }
+    ul {
+      display: flex;
+      margin-left: 100px;
+    }
+    li {
+      list-style: none;
+      color: #008000;
+      width: 100px;
+      text-align: center;
+      height: 30px;
+      border: 1px solid #008000;
+      line-height: 30px;
+    }
+  </style>
+  <body>
+    <header>
+      <span class="red" onclick="changeRed()"></span>
+      <span class="green" onclick="changeGreen()"></span>
+      <span class="blak" onclick="changeBlak()"></span>
+    </header>
+    <ul>
+      <li>新闻</li>
+      <li>娱乐</li>
+      <li>体育</li>
+      <li>电影</li>
+      <li>音乐</li>
+      <li>旅游</li>
+    </ul>
+  </body>
+  <script>
+    // 变颜色 红色
+    var red = document.querySelector(".red");
+    var green = document.querySelector(".green");
+    var blak = document.querySelector(".blak");
+    var ul = document.querySelector("ul");
+    var body = document.body;
+    function changeRed() {
+        blak.classList.remove('addBlak')
+      red.classList.add("addRed");
+      ul.style.backgroundColor = "#ff0000";
+      body.style.backgroundColor = "#ff0076";
+    }
+    // 绿色
+    function changeGreen() {
+        red.classList.remove('addRed')
+      green.classList.add("addGreen");
+      ul.style.backgroundColor = "#008000";
+      body.style.backgroundColor = "#718000";
+    }
+    // 黑色
+    function changeBlak() {
+        green.classList.remove('addGreen')
+      blak.classList.add("addBlak");
+      ul.style.backgroundColor = "#000";
+      body.style.backgroundColor = "#cccccc";
+    }
+  </script>
+</html>
